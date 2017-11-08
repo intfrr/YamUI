@@ -87,16 +87,10 @@ const { GutterSize, TextSize } = require('../Block');
 
 const longText = (
   <span>
-    <Icon icon="arrowDown" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="arrowRight" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="cross" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="dynamicGroup" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="info" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="like" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="phone" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="like" />
   </span>
 );
 
