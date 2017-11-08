@@ -3,7 +3,8 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Icon, { IconSize, IconProps, IconName } from '../Icon';
+import Block, { TextSize } from '../Block';
+import Icon, { IconName } from '../Icon';
 import { ButtonColor, ButtonIconPosition, ButtonSize } from './enums';
 import './Button.css';
 
@@ -132,6 +133,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   render() {
     const {
       text,
+      size,
       ariaLabel,
       icon,
       iconPosition,
@@ -145,18 +147,13 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     const disabled = (this.props as RegularButtonProps).disabled;
     const href = (this.props as LinkButtonProps).href;
 
-    const leftIcon = icon &&
-      iconPosition === ButtonIconPosition.LEFT && (
-        <span className="y-button--icon-wrapper-left">
-          <Icon {...this.getIconProps()} />
-        </span>
-      );
-    const rightIcon = icon &&
-      iconPosition === ButtonIconPosition.RIGHT && (
-        <span className="y-button--icon-wrapper-right">
-          <Icon {...this.getIconProps()} />
-        </span>
-      );
+    const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
+
+    const buttonIcon = icon && (
+      <span className={`y-button--icon-wrapper-${iconPosition}`}>
+        <Icon className="y-button--icon" icon={icon} />
+      </span>
+    );
 
     return (
       <BaseButton
@@ -170,21 +167,13 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {leftIcon}
-        {text}
-        {rightIcon}
+        <Block textSize={textSize}>
+          {iconPosition === 'left' && buttonIcon}
+          {text}
+          {iconPosition === 'right' && buttonIcon}
+        </Block>
       </BaseButton>
     );
-  }
-
-  private getIconProps(): IconProps {
-    const { icon, size } = this.props;
-
-    return {
-      className: 'y-button--icon',
-      icon: icon as IconName,
-      size: size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
-    };
   }
 
   private getClasses() {

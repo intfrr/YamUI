@@ -9,7 +9,11 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -21,7 +25,11 @@ exports[`<Button /> with SMALL size matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="small"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -33,16 +41,19 @@ exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  <span
-    className="y-button--icon-wrapper-left"
+  <Block
+    textSize="small"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="12"
-    />
-  </span>
-  Click Me
+    <span
+      className="y-button--icon-wrapper-left"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+      />
+    </span>
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -54,7 +65,11 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -67,7 +82,11 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -79,7 +98,11 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -91,7 +114,11 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -103,16 +130,19 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  <span
-    className="y-button--icon-wrapper-left"
+  <Block
+    textSize="mediumSub"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="14"
-    />
-  </span>
-  Click Me
+    <span
+      className="y-button--icon-wrapper-left"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+      />
+    </span>
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -124,16 +154,19 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
-  <span
-    className="y-button--icon-wrapper-right"
+  <Block
+    textSize="mediumSub"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="14"
-    />
-  </span>
+    Click Me
+    <span
+      className="y-button--icon-wrapper-right"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+      />
+    </span>
+  </Block>
 </BaseButton>
 `;
 
@@ -146,7 +179,11 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -158,7 +195,11 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
 
@@ -171,6 +212,10 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <Block
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
 </BaseButton>
 `;
